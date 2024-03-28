@@ -1,0 +1,185 @@
+*{
+	box-sizing: border-box;
+}
+
+/* ------------ body content ----------- */
+
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	background-color:#FFFFFF;
+	width: 100%;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ol, ul{
+	margin-top:0;
+	padding: 0rem;
+	color:#0D0E0F;
+}
+
+h1{
+	margin-top:0;
+	font-size:60px;
+}
+
+h2{
+	margin-top:0;
+	font-size:40px;
+}
+
+h3{
+	margin-top:20px;
+	font-size:30px;
+}
+
+h4{
+	margin-top:0;
+	font-size:24px;
+	font-weight: normal;
+	width:clamp(40%, 66ch, 100%);
+}
+p{
+	margin-top:0;
+	font-size:16px;
+	width:clamp(40%, 66ch, 100%);
+}
+
+a{
+	color:#f5f5f5;
+	font-weight:bold;
+}
+a:hover{
+	text-decoration-color:yellow;
+}
+
+nav {
+	display:flex;
+	width: 100vw;
+	align-items:center;
+	padding: 0rem;
+	position: sticky; 
+	top: 0;
+	z-index:100;
+	background-color: #3A7BAA;
+}
+
+nav a{
+	display:inline-block;
+	color:white;
+	background-color:rgba(0, 0, 0, 0);
+	font-size:1.25rem;
+	text-decoration:none;
+	padding:1em 0.45em;
+	margin: 0;
+	flex:1 1 auto;
+
+}	
+
+nav a:hover{
+	color:#FFCD29;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+button{
+	margin-bottom: 80px;
+
+}
+
+ul {
+	list-style-type: none; /*-- https://sentry.io/answers/i-need-an-unordered-list-without-any-bullets-html-css/#:~:text=To%20remove%20the%20bullets%2C%20you,unordered%20list%20to%20%E2%80%9Cnone%E2%80%9D.--*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+img.center{ /*-- https://www.w3schools.com/howto/howto_css_image_center.asp --*/
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+/* --------------- main content ------------ */
+main{
+	padding: 2rem 4rem;
+	margin:2rem 200px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 2em;
+
+}
+
+main section{
+	background-color: #FFFFFF;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+
+/* --------------- grid content ------------ */
+
+.full-columns{
+	grid-column: 1/5;
+}
+
+.hero /*---- learned to make this hero image from here https://www.w3schools.com/howto/howto_css_hero_image.asp ------*/
+{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -100%);
+  color: #3A7BAA;
+  background: rgba(250, 250, 250, .6);
+  padding: 20px 60px; 
+
+}
+
+.MediaandImage {
+display: inline-block;
+	padding: 0rem 3.3rem 0rem 0rem;
+}
+
+
+.profileCard {
+	display: inline-block;
+	padding: 0rem 3.3rem 0rem 0rem;
+}
+
+.TestimonialCard {
+	display: inline-block;
+	padding: 0rem 3.3rem 0rem 0rem;
+}
+
+
+.TestimonialCard p
+{width:clamp(20%, 40ch, 100%);}
+
+.WhoWeAre h4{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+
+
+footer{
+	width: 100vw;
+	height: 200px;
+	color:white;
+	background-color:#25292D;
+	padding: 0rem;
+}
+
+@media (max-width:60em){ 
+	.full-columns {
+		grid-column: auto / span 4;
+	}
+}
